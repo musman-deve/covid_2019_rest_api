@@ -4,7 +4,7 @@ class API {
   API({required this.apiKey});
   final String apiKey;
 
-  factory API.sandbox() => API(apiKey: APIKeys.ncovSandboxKey);
+  // factory API.sandbox() => API(apiKey: APIKeys.ncovSandboxKey);
   static String host = "https://ncov2019-admin.firebaseapp.com";
   String tokenUri = '$host/token';
 

@@ -1,4 +1,5 @@
 import 'package:covid_2019_rest_api/app/services/api.dart';
+import 'package:covid_2019_rest_api/app/services/api_keys.dart';
 import 'package:covid_2019_rest_api/app/services/api_service.dart';
 import 'package:flutter/material.dart';
 
@@ -35,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
   String _accessToken = '';
 
   void _updateAccessToken() async {
-    final apiService = APIService(API.sandbox());
+    final apiService = APIService(APIKeys.ncovSandboxKey);
     final accessToken = await apiService.getAccessToken();
     setState(() {
       _accessToken = accessToken;
